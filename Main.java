@@ -60,9 +60,14 @@ class Main
         /* 
          * Task 3. Add 1 to each element in ar1.  Print it out below
          */
+        System.out.println("** Task 3 **");
         
+        for (int i=0; i<ar1.length; i++)
+            ar1[i]=ar1[i]+1;
+            
+        for (int i=0; i<ar1.length; i++)
+            System.out.println("ar1[" + i + "] = "+ar1[i]);
 
-        
         
         /*
          * task 4. Create a new array called ar3.
@@ -71,12 +76,48 @@ class Main
          *         ar1: 1 2 3
          *         ar3: 1 2 3 0 1 2 3
          */
+        System.out.println("** test 4 **");
+        int[] ar3 = new int[ ar1.length *2 ];
+        for (int i=0 ; i< ar1.length ; i++)
+        {
+            ar3[i]=ar1[i];
+        }
         
+        for (int i=0 ; i<ar1.length ; i++)
+        {
+            ar3[i+ar1.length]=ar1[i];
+        }
+        
+        for (int i=0 ; i<ar3.length ; i++)
+            System.out.println("ar3[" + i + "] = "+ar3[i]);
+        
+        /*
+         * Alternate way of doing task 4
+
+        int k=0;
+        for (int numbers=0; numbers<2 ; numbers++)
+            for (int i=0 ; i<ar1.length ; i++)
+             { 
+                  ar3[k]=ar1[i];
+                  k++;
+             }
+         */
         
         /*
          * Task 5.  Switch the first and last element of ar1.
          *          print out the new ar1.  Then switch them back
          */
+        System.out.println("** Task 5 **");
+        int first = ar1[0];
+        ar1[0] = ar1[ar1.length-1];
+        ar1[ar1.length-1] = first;
+        
+        for (int i=0 ; i<ar1.length ; i++)
+            System.out.println("ar1[" + i + "] = "+ar1[i]);
+        
+        first = ar1[0];
+        ar1[0] = ar1[ar1.length-1];
+        ar1[ar1.length-1] = first;
         
         /*
          * Task 6A. Print the 2nd to (n-1)th elements of ar1
