@@ -350,7 +350,11 @@ class Main
         System.out.println("Print out the names of monsters that start with a vowel:");
         for (int i=0; i<monsterArray.length; i++){
            char firstL = monsterArray[i].charAt(0);
-           if (firstL=='A'||firstL=='E'||firstL=='I'||firstL=='O'||firstL=='U')
+           if (firstL=='A'||
+               firstL=='E'||
+               firstL=='I'||
+               firstL=='O'||
+               firstL=='U')
             System.out.println(monsterArray[i]);
         }
          /*
@@ -369,6 +373,7 @@ class Main
           *         arindex[1]=5
           */
          System.out.println("** Task 14 **");
+         
          /*
           * Create an arrary called "fb" and calculate the
           * first 10 fibonacci sequence.  You start with
