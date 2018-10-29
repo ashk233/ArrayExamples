@@ -373,7 +373,35 @@ class Main
           *         arindex[1]=5
           */
          System.out.println("** Task 14 **");
+
+         int start = 3;
+         int end = 94;
+         int l = end - start+1;
          
+         int[] arx = new int[l];
+         
+         int count14index=0;
+
+         for (int i=0 ; i<l ; i++)
+         {
+             arx[i]=start+i;
+             if (arx[i]%3==0)
+             count14index++;
+            }
+
+         int[] arxindex = new int[count14index];
+         int k14=0;
+         for (int i=0 ; i<l ; i++)
+         {
+             if (arx[i]%3==0)
+             { 
+                 arxindex[k14]=i;
+                 k14++;
+             }
+         }
+
+         for (int i=0 ; i<count14index; i++)
+         System.out.println(arxindex[i]);
          /*
           * Create an arrary called "fb" and calculate the
           * first 10 fibonacci sequence.  You start with
@@ -383,6 +411,15 @@ class Main
           * fb[3]=fb[1]+fb[2]
           * fb[4]=fb[2]+fb[3]
           */
-        
+        System.out.println("** Task 15 **");
+        int[] fb = new int[10];
+        fb[0]=1;
+        fb[1]=1;
+        for (int i=2; i<fb.length; i++){
+            fb[i]=fb[i-1]+fb[i-2];
+        }
+        for (int i=0; i<fb.length; i++){
+            System.out.println(fb[i]);
+        }
     }
 }
