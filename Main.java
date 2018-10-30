@@ -347,6 +347,10 @@ class Main
         System.out.println("Print out the names of monsters:");
         for (int i=0; i<monsterArray.length; i++)
             System.out.println(monsterArray[i]);
+        for (String monster : monsterArray){
+            System.out.println(monster);
+            System.out.println(monster.length());
+        }
         System.out.println("Print out the names of monsters that start with a vowel:");
         for (int i=0; i<monsterArray.length; i++){
            char firstL = monsterArray[i].charAt(0);
